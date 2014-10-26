@@ -246,8 +246,7 @@ ecdata.subevtype_cast_state <- dcast(ecdata.subevtype_melt, SUBEVTYPE + STATE ~ 
 
 # Results
 
-## Across the United States, which types of events (as indicated in the EVTYPE 
-variable) are most harmful with respect to population health?
+## Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?
 
 ```{r}
 library(ggplot2)
@@ -264,6 +263,7 @@ plot2 <- ggplot(phdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = INJURIES)) +
 
 grid.arrange(plot1, plot2, ncol = 2)
 ```
+
 Figure 1
 
 The plots above illustrates the number of fatalities and injuries associated 
@@ -286,6 +286,7 @@ plot2 <- ggplot(ecdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = CROPDMGDOL))
 
 grid.arrange(plot1, plot2, ncol = 2)
 ```
+
 Figure 2
 
 The plots above illustrates the total dollar impact associated with a various 
