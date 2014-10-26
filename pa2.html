@@ -1,65 +1,127 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="x-ua-compatible" content="IE=9" >
 
 <title>Economic and Health Impacts of Severe Weather Events</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
 
 <style type="text/css">
 body, td {
    font-family: sans-serif;
    background-color: white;
-   font-size: 12px;
-   margin: 8px;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
 }
 
 tt, code, pre {
    font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
 }
 
-h1 { 
-   font-size:2.2em; 
+h1 {
+   font-size:2.2em;
 }
 
-h2 { 
-   font-size:1.8em; 
+h2 {
+   font-size:1.8em;
 }
 
-h3 { 
-   font-size:1.4em; 
+h3 {
+   font-size:1.4em;
 }
 
-h4 { 
-   font-size:1.0em; 
+h4 {
+   font-size:1.0em;
 }
 
-h5 { 
-   font-size:0.9em; 
+h5 {
+   font-size:0.9em;
 }
 
-h6 { 
-   font-size:0.8em; 
+h6 {
+   font-size:0.8em;
 }
 
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
+pre, img {
+  max-width: 100%;
 }
-
+pre {
+  overflow-x: auto;
+}
 pre code {
    display: block; padding: 0.5em;
 }
 
-code.r, code.cpp {
-   background-color: #F8F8F8;
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
 }
 
 table, td, th {
@@ -82,97 +144,57 @@ hr {
 }
 
 @media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
    }
 
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
+   body {
+      font-size:12pt;
+      max-width:100%;
    }
 
-   hr { 
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
       visibility: hidden;
       page-break-before: always;
    }
 
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
    }
 
-   tr, img { 
-      page-break-inside: avoid; 
+   tr, img {
+      page-break-inside: avoid;
    }
 
-   img { 
-      max-width: 100% !important; 
+   img {
+      max-width: 100% !important;
    }
 
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
    }
 
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
    }
 
-   h2, h3 { 
-      page-break-after: avoid; 
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
    }
 }
-
 </style>
-
-<!-- Styles for R syntax highlighter -->
-<style type="text/css">
-   pre .operator,
-   pre .paren {
-     color: rgb(104, 118, 135)
-   }
-
-   pre .literal {
-     color: rgb(88, 72, 246)
-   }
-
-   pre .number {
-     color: rgb(0, 0, 205);
-   }
-
-   pre .comment {
-     color: rgb(76, 136, 107);
-   }
-
-   pre .keyword {
-     color: rgb(0, 0, 255);
-   }
-
-   pre .identifier {
-     color: rgb(0, 0, 0);
-   }
-
-   pre .string {
-     color: rgb(3, 106, 7);
-   }
-</style>
-
-<!-- R syntax highlighter -->
-<script type="text/javascript">
-var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
-hljs.initHighlightingOnLoad();
-</script>
-
 
 
 
@@ -183,9 +205,33 @@ hljs.initHighlightingOnLoad();
 
 <h1>Economic and Health Impacts of Severe Weather Events</h1>
 
+<p>Created by: Houtsin Diep
+Submission date: Oct 26, 2014</p>
+
 <h1>Synopsis</h1>
 
-<p>Describe and summarize analysis in &lt;=10 sentences.</p>
+<p>In this report, the data from U.S. National Oceanic and Atmospheric 
+Administration&#39;s (NOAA) from 1950 - 2011 was analysed to determine the 
+population health and economic consequences of various types of weather events.</p>
+
+<p>It was determined that the most common types of weather events over the 
+1950-2011 time period were WIND, SNOW, THUNDERSTORM, FLOOD, RAIN. Based on these
+types of weather events, the population health effects and economic consequences
+are summarised within.</p>
+
+<h1>Source Data and Support Documents Locations:</h1>
+
+<p>The data and supporting information for the data is located at the following 
+locations:</p>
+
+<ol>
+<li>The NOAA database:
+(<a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2">https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2</a>)</li>
+<li>National Weather Service Storm Data Documentation:
+(<a href="https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf">https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2Fpd01016005curr.pdf</a>)</li>
+<li>National Climatic Data Center Storm Events FAQ:
+(<a href="https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf">https://d396qusza40orc.cloudfront.net/repdata%2Fpeer2_doc%2FNCDC%20Storm%20Events-FAQ%20Page.pdf</a>)</li>
+</ol>
 
 <h1>Tool Used (Requirements)</h1>
 
@@ -200,200 +246,302 @@ hljs.initHighlightingOnLoad();
 
 <h2>Set Working Directory</h2>
 
+<p>The working director was set in preparation to read the data.</p>
+
 <pre><code class="r">setwd(&quot;~/Rprac/reproducible_research/peer_assessment_2&quot;)
 </code></pre>
 
 <h2>Read Data File</h2>
 
-<pre><code>data &lt;- read.csv(&quot;repdata-data-StormData.csv.bz2&quot;)
+<p>Checked if the data has already been loaded and, if not, load the data set into
+the session.</p>
+
+<pre><code class="r">if (!&quot;data&quot; %in% ls()) {
+    data &lt;- read.csv(&quot;repdata-data-StormData.csv.bz2&quot;)
+}
 </code></pre>
 
 <h2>Subset Data</h2>
 
-<p>Subset the data to focus on population health (evtype (8), fatalities (23), injuries (24), state (7))</p>
+<p>The raw data was sebsetted into two sets, one for further analysis on the 
+population health and one for further analysis on the economic consequences.</p>
+
+<p>Subset the data to focus on population health (evtype (8), fatalities (23), 
+injuries (24), state (7))</p>
 
 <pre><code class="r">phdata &lt;- data[,c(8,23,24,7)]
 </code></pre>
 
-<pre><code>## Error in data[, c(8, 23, 24, 7)]: object of type &#39;closure&#39; is not subsettable
-</code></pre>
-
-<p>Subset the data to focus on economic consequences (evtype (8), propdmg (25), propdmgexp (26), cropdmg (27), cropdmgexp (28), state (7))</p>
+<p>Subset the data to focus on economic consequences (evtype (8), propdmg (25), 
+propdmgexp (26), cropdmg (27), cropdmgexp (28), state (7))</p>
 
 <pre><code class="r">ecdata &lt;- data[,c(8, 25:28, 7)]
 </code></pre>
 
-<pre><code>## Error in data[, c(8, 25:28, 7)]: object of type &#39;closure&#39; is not subsettable
-</code></pre>
-
 <h2>Determining which event types to focus on</h2>
 
-<p>Determine the most common types of weather by analysing all the words in the event types and finding the most common</p>
+<p>Determine the most common types of weather by analysing all the words in the 
+event types and finding the most common</p>
 
 <pre><code class="r">phdata.evtype &lt;- (unique(phdata[,1]))
+phdata.evtype &lt;- as.character(phdata.evtype)
+
+phdata.evtype.split &lt;- unlist(strsplit(phdata.evtype, c(&quot; &quot;)), recursive = 
+                                      FALSE)
+phdata.evtype.split &lt;- unlist(strsplit(phdata.evtype.split, c(&quot;/&quot;)), recursive = 
+                                      FALSE)
+
+df &lt;- as.data.frame(phdata.evtype.split, stringAsFactors = 
+                            default.stringsAsFactors())
+summary(df, 10)
 </code></pre>
 
-<pre><code>## Error in unique(phdata[, 1]): object &#39;phdata&#39; not found
+<pre><code>##    phdata.evtype.split
+##  WIND        : 122    
+##  SNOW        :  98    
+##  WINDS       :  87    
+##  HEAVY       :  74    
+##  HIGH        :  73    
+##  THUNDERSTORM:  73    
+##  FLOOD       :  69    
+##  Summary     :  59    
+##  RAIN        :  56    
+##  (Other)     :1815
 </code></pre>
 
-<pre><code class="r">phdata.evtype &lt;- as.character(phdata.evtype)
-</code></pre>
+<p>Based on the frequency of words, it looks like WIND, SNOW, THUNDERSTORM, FLOOD, 
+RAIN are the most common. These event types was used to analyse both population 
+health and economic consequences.</p>
 
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;phdata.evtype&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.evtype.split &lt;- unlist(strsplit(phdata.evtype, c(&quot; &quot;)), recursive = FALSE)
-</code></pre>
-
-<pre><code>## Error in strsplit(phdata.evtype, c(&quot; &quot;)): object &#39;phdata.evtype&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.evtype.split &lt;- unlist(strsplit(phdata.evtype.split, c(&quot;/&quot;)), recursive = FALSE)
-</code></pre>
-
-<pre><code>## Error in strsplit(phdata.evtype.split, c(&quot;/&quot;)): object &#39;phdata.evtype.split&#39; not found
-</code></pre>
-
-<pre><code class="r">df &lt;- as.data.frame(phdata.evtype.split, stringAsFactors = default.stringsAsFactors())
-</code></pre>
-
-<pre><code>## Error in as.data.frame(phdata.evtype.split, stringAsFactors = default.stringsAsFactors()): object &#39;phdata.evtype.split&#39; not found
-</code></pre>
-
-<pre><code class="r">summary(df, 10)
-</code></pre>
-
-<pre><code>## Error in object[[i]]: object of type &#39;closure&#39; is not subsettable
-</code></pre>
-
-<p>Based on the frequency of words, it looks like WIND/WINDS, SNOW, THUNDERSTORM, FLOOD, RAIN are the most common.</p>
-
-<h2>Subset and apply factor Event Types WIND/WINDS, SNOW, THUNDERSTORM, FLOOD, RAIN</h2>
+<h2>Subset and apply factor Event Types WIND, SNOW, THUNDERSTORM, FLOOD, RAIN</h2>
 
 <h3>For Population Health Data</h3>
 
+<p>The PH data was subsetted and a factor variable was created to determine what 
+each type of event was. Once the generalized weather event type was created, a 
+subset of the data was set for analysis.</p>
+
 <pre><code class="r">subevtype &lt;- c(&quot;WIND&quot;, &quot;SNOW&quot;, &quot;THUNDERSTORM&quot;, &quot;FLOOD&quot;, &quot;RAIN&quot;)
 
-phdata.subevtype &lt;- subset(phdata, grepl(paste(subevtype, collapse = &quot;|&quot;), phdata$EVTYPE))
-</code></pre>
+phdata.subevtype &lt;- subset(phdata, grepl(paste(subevtype, collapse = &quot;|&quot;), 
+                                         phdata$EVTYPE))
+phdata.subevtype$SUBEVTYPE &lt;- phdata.subevtype$EVTYPE
+phdata.subevtype$SUBEVTYPE &lt;- as.factor(gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;,
+                                             &quot;\\1&quot;, phdata.subevtype$EVTYPE, 
+                                             ignore.case = TRUE))
 
-<pre><code>## Error in subset(phdata, grepl(paste(subevtype, collapse = &quot;|&quot;), phdata$EVTYPE)): object &#39;phdata&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.subevtype$SUBEVTYPE &lt;- as.factor(gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;, &quot;\\1&quot;, phdata.subevtype$EVTYPE, ignore.case = TRUE))
-</code></pre>
-
-<pre><code>## Error in gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;, &quot;\\1&quot;, phdata.subevtype$EVTYPE, : object &#39;phdata.subevtype&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.subevtype &lt;- phdata.subevtype[,c(5,4,2,3)]
-</code></pre>
-
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;phdata.subevtype&#39; not found
+phdata.subevtype &lt;- phdata.subevtype[,c(5,4,2,3)]
 </code></pre>
 
 <h3>For Economic Consequences Data</h3>
 
-<pre><code class="r">ecdata.subevtype &lt;- subset(ecdata, grepl(paste(subevtype, collapse = &quot;|&quot;), ecdata$EVTYPE))
+<p>The EC data was subsetted and a factor variable was created to determine what 
+each type of event was. Once the generalized weather event type was created, a 
+subset of the data was set for analysis.</p>
+
+<pre><code class="r">ecdata.subevtype &lt;- subset(ecdata, grepl(paste(subevtype, collapse = &quot;|&quot;), 
+                                         ecdata$EVTYPE))
+ecdata.subevtype$SUBEVTYPE &lt;- ecdata.subevtype$EVTYPE
+ecdata.subevtype$SUBEVTYPE &lt;- as.factor(gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;,
+                                             &quot;\\1&quot;, ecdata.subevtype$EVTYPE,
+                                             ignore.case = TRUE))
 </code></pre>
 
-<pre><code>## Error in subset(ecdata, grepl(paste(subevtype, collapse = &quot;|&quot;), ecdata$EVTYPE)): object &#39;ecdata&#39; not found
+<p>The magnitude and property damage columns need to be merged in order to 
+accurately gauge the dollar impact of the various types of weather event types.</p>
+
+<p>Exploring the magnitude of the property/crop damage (exponent):</p>
+
+<pre><code class="r">table(ecdata.subevtype$PROPDMGEXP)
 </code></pre>
 
-<pre><code class="r">ecdata.subevtype$SUBEVTYPE &lt;- as.factor(gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;, &quot;\\1&quot;, ecdata.subevtype$EVTYPE, ignore.case = TRUE))
+<pre><code>## 
+##             -      ?      +      0      1      2      3      4      5 
+## 228521      1      5      4    179     17      6      3      4     13 
+##      6      7      8      B      h      H      K      m      M 
+##      3      2      0     12      1      5 243723      2   4799
 </code></pre>
 
-<pre><code>## Error in gsub(&quot;.*(wind|snow|thunderstorm|flood|rain).*$&quot;, &quot;\\1&quot;, ecdata.subevtype$EVTYPE, : object &#39;ecdata.subevtype&#39; not found
+<pre><code class="r">table(ecdata.subevtype$CROPDMGEXP)
 </code></pre>
 
-<pre><code class="r">ecdata.subevtype &lt;- ecdata.subevtype[,c(7,6,2,4)]
+<pre><code>## 
+##             ?      0      2      B      k      K      m      M 
+## 318785      7     11      1      1      6 157566      0    923
 </code></pre>
 
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;ecdata.subevtype&#39; not found
+<p>For this analysis, we will ignore any values that are not alpha-numeric. </p>
+
+<p>Next, we will convert the magnitudes to multipliers and multiple by the 
+respective damage columns. A new variable for the total value of property and
+crop damage was created.</p>
+
+<pre><code class="r">options(scipen = 1)
+
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;B&quot;] &lt;- 1e+09
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;8&quot;] &lt;- 1e+08
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;7&quot;] &lt;- 1e+07
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;M&quot;] &lt;- 1e+06
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;m&quot;] &lt;- 1e+06
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;6&quot;] &lt;- 1e+06
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;5&quot;] &lt;- 1e+05
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;4&quot;] &lt;- 10000
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;K&quot;] &lt;- 1000
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;3&quot;] &lt;- 1000
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;H&quot;] &lt;- 100
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;h&quot;] &lt;- 100
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;2&quot;] &lt;- 100
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;1&quot;] &lt;- 10
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;0&quot;] &lt;- 1
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;&quot;] &lt;- 1
+
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;+&quot;] &lt;- 0
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;-&quot;] &lt;- 0
+ecdata.subevtype$PROPEXP[ecdata.subevtype$PROPDMGEXP == &quot;?&quot;] &lt;- 0
+
+ecdata.subevtype$PROPDMGDOL &lt;- ecdata.subevtype$PROPDMG * ecdata.subevtype$PROPEXP
 </code></pre>
 
-<p>Note: As the raw data was the same for both the economic and personal subsets, the focus will remain on the weather that occurs most frequently in the data.</p>
+<pre><code class="r">ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;B&quot;] &lt;- 1e+09
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;M&quot;] &lt;- 1e+06
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;m&quot;] &lt;- 1e+06
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;K&quot;] &lt;- 1000
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;k&quot;] &lt;- 1000
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;2&quot;] &lt;- 100
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;0&quot;] &lt;- 1
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;&quot;] &lt;- 1
+ecdata.subevtype$CROPEXP[ecdata.subevtype$CROPDMGEXP == &quot;?&quot;] &lt;- 0
+
+ecdata.subevtype$CROPDMGDOL &lt;- ecdata.subevtype$CROPDMG * ecdata.subevtype$CROPEXP
+</code></pre>
+
+<p>A new subset of data was created in order for summary. It contained the 
+following columns:</p>
+
+<ol>
+<li>General Weather Event Type</li>
+<li>State</li>
+<li>Property Damage Value</li>
+<li>Crop Damage Value</li>
+</ol>
+
+<pre><code class="r">ecdata.subevtype.sub &lt;- ecdata.subevtype[,c(7,6,9,11)]
+</code></pre>
+
+<p>Note: As the raw data was the same for both the economic and personal subsets, 
+the focus will remain on the weather that occurs most frequently in the data.</p>
 
 <h2>Summarizing data</h2>
 
 <h3>For Population Health Data</h3>
 
-<p>Summarize the # of injuries and # of fatalities by subset of the weather event types by state.</p>
+<p>Summarize the # of injuries and # of fatalities by subset of the weather event 
+types by state.</p>
 
 <pre><code class="r">library(reshape2)
-</code></pre>
+library(gridExtra)
 
-<pre><code>## Warning: package &#39;reshape2&#39; was built under R version 3.1.1
-</code></pre>
+phdata.subevtype_melt &lt;- melt(phdata.subevtype, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;))
 
-<pre><code class="r">phdata.subevtype_melt &lt;- melt(phdata.subevtype, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;))
-</code></pre>
-
-<pre><code>## Error in melt(phdata.subevtype, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;)): object &#39;phdata.subevtype&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.subevtype_cast_total &lt;- dcast(phdata.subevtype_melt, SUBEVTYPE ~ variable, sum)
-</code></pre>
-
-<pre><code>## Error in match(x, table, nomatch = 0L): object &#39;phdata.subevtype_melt&#39; not found
-</code></pre>
-
-<pre><code class="r">phdata.subevtype_cast_state &lt;- dcast(phdata.subevtype_melt, SUBEVTYPE + STATE ~ variable, sum)
-</code></pre>
-
-<pre><code>## Error in match(x, table, nomatch = 0L): object &#39;phdata.subevtype_melt&#39; not found
+phdata.subevtype_cast_total &lt;- dcast(phdata.subevtype_melt, SUBEVTYPE ~ 
+                                             variable, sum)
+phdata.subevtype_cast_state &lt;- dcast(phdata.subevtype_melt, SUBEVTYPE + STATE ~ 
+                                             variable, sum)
 </code></pre>
 
 <h3>For Economic Consequences Data</h3>
 
-<p>Summarize the </p>
+<p>Summarize the # of injuries and # of fatalities by subset of the weather event 
+types by state.</p>
 
-<pre><code class="r">ecdata.subevtype_melt &lt;- melt(ecdata.subevtype, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;))
-</code></pre>
+<pre><code class="r">ecdata.subevtype_melt &lt;- melt(ecdata.subevtype.sub, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;))
 
-<pre><code>## Error in melt(ecdata.subevtype, id = c(&quot;SUBEVTYPE&quot;, &quot;STATE&quot;)): object &#39;ecdata.subevtype&#39; not found
-</code></pre>
-
-<pre><code class="r">ecdata.subevtype_cast_total &lt;- dcast(ecdata.subevtype_melt, SUBEVTYPE ~ variable, sum)
-</code></pre>
-
-<pre><code>## Error in match(x, table, nomatch = 0L): object &#39;ecdata.subevtype_melt&#39; not found
-</code></pre>
-
-<pre><code class="r">ecdata.subevtype_cast_state &lt;- dcast(ecdata.subevtype_melt, SUBEVTYPE + STATE ~ variable, sum)
-</code></pre>
-
-<pre><code>## Error in match(x, table, nomatch = 0L): object &#39;ecdata.subevtype_melt&#39; not found
+ecdata.subevtype_cast_total &lt;- dcast(ecdata.subevtype_melt, SUBEVTYPE ~ variable, sum)
+ecdata.subevtype_cast_state &lt;- dcast(ecdata.subevtype_melt, SUBEVTYPE + STATE ~ variable, sum)
 </code></pre>
 
 <h1>Results</h1>
 
-<p>Your data analysis must address the following questions:</p>
+<h2>Across the United States, which types of events (as indicated in the EVTYPE</h2>
 
-<p>Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?</p>
+<p>variable) are most harmful with respect to population health?</p>
 
-<p>Across the United States, which types of events have the greatest economic consequences?</p>
+<pre><code class="r">library(ggplot2)
 
-<p>Consider writing your report as if it were to be read by a government or municipal manager who might be responsible for preparing for severe weather events and will need to prioritize resources for different types of events. However, there is no need to make any specific recommendations in your report.</p>
+plot1 &lt;- ggplot(phdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = FATALITIES)) + 
+        geom_bar(stat = &quot;identity&quot;, fill = &quot;blue&quot;) + 
+        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        ggtitle(&quot;Fatalities Based on Common Weather Types&quot;)
 
-<p>**** must have at least one plot ****
-**** max 3 figures, panel plots count as 1 figure ****</p>
+plot2 &lt;- ggplot(phdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = INJURIES)) + 
+        geom_bar(stat = &quot;identity&quot;, fill = &quot;blue&quot;) + 
+        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        ggtitle(&quot;Injuries Based on Common Weather Types&quot;)
 
-<h1>Publishing Your Analysis</h1>
+grid.arrange(plot1, plot2, ncol = 2)
+</code></pre>
 
-<p>For this assignment you will need to publish your analysis on RPubs.com. If you do not already have an account, then you will have to create a new account. After you have completed writing your analysis in RStudio, you can publish it to RPubs by doing the following:</p>
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-14"/> 
+Figure 1</p>
 
-<p>In RStudio, make sure your R Markdown document (.Rmd) document is loaded in the editor</p>
+<p>The plots above illustrates the number of fatalities and injuries associated 
+with a various types of weather events. The weather event types that can be 
+associated with the most fatalities and injuries are flooding and wind.</p>
 
-<p>Click the Knit HTML button in the doc toolbar to preview your document.</p>
+<h2>Across the United States, which types of events have the greatest economic consequences?</h2>
 
-<p>In the preview window, click the Publish button.</p>
+<pre><code class="r">plot1 &lt;- ggplot(ecdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = PROPDMGDOL)) + 
+        geom_bar(stat = &quot;identity&quot;, fill = &quot;blue&quot;) + 
+        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        ggtitle(&quot;Property Damage Based on Common Weather Types&quot;)
 
-<p>Once your document is published to RPubs, you should get a unique URL to that document. Make a note of this URL as you will need it to submit your assignment.</p>
+plot2 &lt;- ggplot(ecdata.subevtype_cast_total, aes(x = SUBEVTYPE, y = CROPDMGDOL)) + 
+        geom_bar(stat = &quot;identity&quot;, fill = &quot;blue&quot;) + 
+        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+        ggtitle(&quot;Crop Damage Based on Common Weather Types&quot;)
 
-<p>NOTE: If you are having trouble connecting with RPubs due to proxy-related or other issues, you can upload your final analysis document file as a PDF to Coursera instead.</p>
+grid.arrange(plot1, plot2, ncol = 2)
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAAElBMVEUAAAAAAP9/f3/l5eXy8vL///9N9dahAAAACXBIWXMAAAsSAAALEgHS3X78AAAWfUlEQVR4nO2di5qiwLaDOezN+7/y2dMqFBdrVWKKAirrm+mLQUzyi2C30sPk6XKG1gY8bcbgOx2D73QMvtMx+E7H4Dsdg+90DL7TMfhOx+A7HYPvdAy+0zH4TsfgOx2D73QMvtMx+E7H4DudAPxGHv6GuZmSK2Z18oY/a00/Qqt9YOS//yD4L+uCrJTe2F6janhf83gF8WofF3kB/75jDdP7DpZ+P9/pVjGG9VKbK/59myyyvnq60MF1tgZW1/9ywwcettd9G9re/rLav3XAt3y7yJ+MQ3K/eF/7+Psd+HSpd4VDIg3J96urrxbaX2deNjGQrGY6vuEDD5vrDkc3uFrtMGVv+SmR5xseDi9PP097M8kda7PA4QpeN5TssIb1mo4aO2xxqw6HXx5dd9fCt9V+u+WnRB4WcQf8bTgCvyw17C9KV7RcMVlomj8Oh5uKsIW5gvQGp2ULXa02C/7+kRf/X7b4TRWry745OHSyuuL+brS/sdotbNdzkPYb+CdE/hn8FzNhC8PBaspb+H7DaAvDl9Xit3yvyEfgv65oC36+1QMzm8/rFNuFNmYyLSzfEC2klDeIdqtdVfG8yOlD/fenc6+vV6tLnt+9jgsTB+lzms/nYXfFdKFkmcPnNtub3qr7Fr5cN/345bnVet1Hzh8Refh8mpdMvtpNRhJe5TrDmb9X5Arg13e9Ow5s/oaRC8APaKL0+estB3d/v8giu//Zz9FliP7zCg50TVhRAyfLG78GLxrcoMGTCxg8JG/8isD/dz9HlyH6zys40DVhD6c92UDe+PUWLxrcoMGTCxg8JG/8GrxocIMGTy5g8JC88WvwxzO+P43j6+N4tEB6MW7Q4MkFaoJ/Ex1f/1fUx3mBcUok3KDBkwtUBD8mrMd5g39/nBeYwR89Ilx9DP54xuSLZbt/3QnG9eVsA97iyQVOAZ98fiMflwsmg8ed3QP8/OA+ri8yeDr2DcDPD+zzPn7cLOCjetzZxcGf0IDBkwsYPCRv/CrB/19uUOe3BK8swOCFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuiYs1wDq3+CFuibs4fydQDFXAHqCRrW88WvwogkbQP17ixfqmrBcA6h/gxfqmrBcA6h/gxfqmrBcA6h/gxfqmrBcA6h/gxfqmrBcA6j/huCX03oentAzPeNjGNvgUf/twI/r83ul36RneiyLbfCo/2bgxxny8Qk9dwtMWfDamq83zwGfPp4fndBz8kN9OmEDqP/m4N9f7U7oORl8OmEDqP/m4L+d0HMy+HTCBlD/jcFnTuhp8OmEDaD+/TxeqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqGvCcg2g/g1eqJcHWt5FNG1ebpgssPsz4gZ/d/Bj+grj5GXl81fjOK0vDxtA/Ru8UC+NM05H4LfvJZrBF72XSFO0bAz+eA7A795L5C2+E/Db9xIZfCfgU8XgC2PfEfz8LqJv7yXyUf3zwOsbQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP0bvFDXhOUaQP3fA3z4l1XhP60aL0DomrCH0yn4MLa3eNS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TViuAdS/wQt1TdjDCX92if7kUS1v/Bq8aMIGUP/e4oW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IW6JizXAOrf4IV6QRK2kLAB1H8L8Hj4MLbBo/4NXqgXJDF4bWyDR/0bvFAvSPIv+zh+/kD464vV3w//XD498M+I9wh++MybbPJpXL5PvhvXl4cNoP7PBL8J3xX4zaw2+A/q1d0gAT8/QOQKgDutO346dzjJBj8D/vv32gs8bYvnJ4x9A/DpY12yT1/Av3fsy/8x2cmHDaD+zwXPPdA/AvyQfPzg3G7xy2UP2+KH1WWfpLtj2nkX+CDwQ/p5jrc6ek+KeNhR/Sr8NC5018e082HOY8ETEzaA+m8GfpzW4Jdj2ik9uik8pr3aQe1uDH75vAKfHNNOT3yo3+zm4AkbQP0338fvj2mnR4KnD2wLG0D9Nzyq327xCesngv9twgZQ/w2fxy/b+t936cG9wW8nbAD17x/gCPVsBj/U14h9ffA+uGPCh7EvD95P56jwYWyDR/0bvFDPJDB4KnwY2+BR/wYv1DMJ+BehFDaA+j8VvF+BQ0/YAOrfz+OFuiYs1wDq3+CFejbDMPX8AxwyfBj7+uCHzz9uwgZQ/2f/AIcLH8a+PPgh+c9M2ADq/+yjei58GPsW4HeFKBtA/fvpnFDPJDB4KnwY+/Lg/UuaTvfx/rVsr0f1P07YAOrfz+OFuiYs1wDq3+CFuiYs1wDq3+CFeiaBf0nT6y9pfjiwK2oA9X/uUX21+/v1wb/u92T+u4Onw4ex7wD+lZ9IX9QA6r/BPr7Ph3pv8Z1u8T/u4//7b3IF/Hc70+6SqvI2rib8/cH7qL7Xo/ofJ2wA9e/n8UJdE5ZrAPVv8EI9m8G/pKkR+/rg/WvZPn8t6xdiUOHD2AaP+jd4oZ5JYPBU+DC2waP+DV6oZxL4Bzj+AQ41YQOofz+PF+qasFwDqH+DF+q5CL/89KakAdT/uc/j2fBh7MuD/+XtU0UNoP7PPrjjwoexDR71b/BCPZPA4OvENnjUv8EL9UwCP4/383hqwgZQ/346J9Q1YbkGUP8GL9SzGfxCDCJ2+BpT+EWm8QKEnovgF2L4hRjMhA2g/s8+qufCh7ENHvVv8EI9k8DgqfBh7MuD9z6+0328j+p7fXn1jxM2gPr383ihrgnLNYD6N3ihnovwfqjr8uCODx/Gvjz41y+o+J182ADq/+yjei58GPse4D/J57+TvP9z4dOXy8MGUP+ng6fu82Hse4CfuSafP386e1pdtrs8bAD1f/4Wz0wY+1bglw1+BXj5Q9ob8EV/SJ3qtd4Y/EH2heiUAE7+kLq3+AeB37wI5QD88ofU15c8ALxfgTNDP9ziU/FJWzw/YexbgZ/mbXt19J5s3w87qucnjH0D8L+9zjZsAPXf4gc4FWJfH3zPv53r+uDuqBBlA6h/gxfqmQQGXye2waP+DV6o5yJ0vY/v+nl816/AqRb7BuArN4D6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgnLNYD6N3ihrgl7OOGJ29HTrqvljd/v4DdnftqIE/ju8MeDDxtA/Tfb4tdnflpfOo4TeD4Ig0f9twK/OfNTes6n11lAsHM+Xe2kT/J5DvhpdR6Y9JxP8wXe4pcJG0D9tzy4W4Ffzvk0Gfx+wgZQ/xfa4j/fTQa/n7AB1H+7g7v1mZ/WB/c+qt9O2ADq38/jhbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghbomLNcA6t/ghXppnPlNQq93DO7PEOC/H18a+1bgl7cFjutv0+9G8N2DqH+DF+pAouSt//szBGzAF50hQFO0bAz+eNKTQuzPEOAtvjj2zcCv3hi8P0PA+pKyBlD/Bi/US+Osz/+zP0OAt/ji2LcCP8779tXRe7J9+6i+NPatwFdpAPVv8EJdE5ZrAPVv8EJdE5ZrAPVv8EJdE5ZrAPVv8EJdE5ZrAPWPytFNb/wavGjCBlD/Bi/UNWG5BlD/Bi/UNWG5BlD/Bi/UNWG5BlD/Bi/UNWG5BlD/Bi/UNWG5BlD/Bi/UNWG5BlD/Bi/UNWG5BlD/9wAf/ike+G/xxAsQuibs4XQKPoztLR71b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/BCXROWawD1b/CK6MfhlRM6QPMZvCJ6ffDhKxLQ1xOgcnTTG78GL5rQAZrPW7wiusEbfKUJHaD5DF4R3eANvtKEDtB8Bq+IbvAGX2lCB2g+g1dEN3iDrzShAzSfwSuiG7zBV5rQAZrP4BXRDd7gK03oIJah+AZfFN3gDb7ShA5iGYpv8EXRDd7gK03oIJah+AZfFN3gDb7ShA5iGYpv8EXRDd7gK03oIJah+AZfFN3gDb7ShA5iGYpv8EXRDd7gK03oIJah+AZfFN3gDb7ShA5iGYp/J/CRjiU3+OL0R9kNXjShg1iG4ht8UXSDN/hKEzr4Se4b/O/r14TlGrgN+PlvZKd/LDu9BPoj2iVgauvl4DfZJQ3cBfz4/r98sbp4XF/+LPCb7JoGfgb/m8yDH9ffJQvsN4ibzxfwj2qgGPzfv/Ev4rf7e/BYBOo/r+BALyzlGLy6gZNlGvx7t7atoyPw4gbuAn59cY/gxQ1cFPw037/fO7BkP/blmBZydmXw2+x1GrgqeGhwZ5cGf0oDBk8uYPCQvPFr8KLBDRo8uYDBQ/LGr8GLBjdo8OQCBg/JG78GLxrcoMGTCxg8JG/8GrxocIMGTy5g8JC88WvwosENGjy5gMFD8savCPzBRC9NCF+68OsKmr82IjDQUjb4mmPwlG7wFWWDrzmdgvdcegy+0zH4TsfgO5124H8+uLv5ND42bbjF/5j8fm9e2cxPx+U/p68GfozfV1SVfMHt153YQD3yBeFrgV/eZ5ZbKC+F185dv+T2a06Jge9qHD+XvuS2q4FPPh7qf3fJrB4Vk88e3H71CQwE+QP19SGvNwI/RXe6ccq/yXQ8eFd6or6LOV5i9RaoVhMYCPJn42fTF4av+yPbb7e9aFnvwf0if5cv2FnUnYyBfP44fjZ9Wfgq4D/7mJzz/MNB9nH+I2fvF/nbrzxhAfn80V4wSF8UvgL48eMqd9PZx4MxvwfbnqPi6/obcS8pIPdwkI1fkr4kfA3w84fvcva45pXum/N5c/heTfCAUXvyBQT5g/hR+uLwtcAHB6yZBeZYuf1j/llscNxYe4J8+fxB/DB9afgG4GPnuat/Hga/PiCUrKLuhHfs/LOZ3JWD9EB4NfjxfVQRgTt2XmY8uL8H1648cQHf8xfFz95nysNrwY/vB5r8Djp6oJqCI4DgAKIl+aiAIH8UP+hmAsKLwc8fjuX4iPRT3NcVRM91gvVXnuC4LsyfjR+mR8JXAB88TQu8xWKc+6LHdSX5Qy13TIyEPxX8NGV/CB0/FYnuWMHV608e/JT1GMYP7lVYeP0+nj0ineYHuu/rDo588j/fP2OinXA2fy5+nB4MLz6qD34RHBnLRFt+FPalmc//1uTj52qBfLRQkJ4ILwNfdpOZ456Co/n4wK/IRJ0puu3MXio8mg+P+0oMzCMCX3y7uf1/Rs/9Ki5ZR9Ojul/I5+OXpEfDa8DPRxbsA+183BMsU2CjyfxYQEH8mDx20xLw80+f+eJLDkoLVt4I/M8FFMQvecQDRgN++m17T9dzdPH8e422B27fR1NA7lnezyvfjuih/vdNbfye7Kq4k/m5gO/xK6XXHdz9vIrccV/r5+fh/H7Hz9zra6RXPZ2ryeUCP5GLp5q/SulPfh5PrHesu37ZVDFYL/3F3zT5egab2f8/emqmvzb4X388cO+pmv7i4KcbHNdVm6rprwz+75Gu2w2+cvoLg49eu/fsqZ3+uuDfe7hOyVdPf2HwU/tftbab6umvC34qeafUc6d2+guD7/e47m8qp78y+J9+z3v/qZv+muA/rzHqk/sp6S8J/pW4S+jTWemvCT752N+ck/5y4Mf1h87mvPSXA7/E7hH8eemvB/6Tvc8Du9PSXxD8O3uf3E9LfzHwzc9f03TOTH8l8O9dW+uT0Daak9NfCXxyUNMx+emc9JcC3+/B/N+cmv5a4E3+tPTXAd/vY/y/OT39RcB77352+ouAX9522NpIk2mQ/irg37m7fCI3tUh/GfAdb+//5vT0lwD/vr+3ttFo2qS/APjlnQOtnbSYVunbgx+7PqJvlr45+LFb5v+mXfrW4OczeXVJvmH61uD/TZfM52mU/grgTb7BXAJ8tz+3eU2T9NcA7zl9DL7TMfhOx+A7HYPvdAy+0zH4TsfgOx2D73TagR/+N7OB4fX98L78f18M80If4d9Sm4VuPK3jNytveH9Ykq8uWC6fhYOF7jvN418W/Dp0d+Crx28LfipOPg2rC54BfmoY/2L7+PTztEr+/vrZ+/gT47ctL/dYNw2LNn9abyh3n5bxr7uPfzb45vGbg1/9X++/hv2nx4FvFr/5Pv7vi8/36/1XLvlT9vHN4t+6PA8/Bt/pGHynY/CdjsF3Ogbf6Rh8p2PwnY7BdzoG3+n8P1sp2QshPF1jAAAAAElFTkSuQmCC" alt="plot of chunk unnamed-chunk-15"/> 
+Figure 2</p>
+
+<p>The plots above illustrates the total dollar impact associated with a various 
+types of weather events. The weather event type that can be associated with the
+highest dollar impact is flooding.</p>
+
+<h1>System Information</h1>
+
+<p>This analysis was performed with the following system:</p>
+
+<pre><code class="r">sessionInfo()
+</code></pre>
+
+<pre><code>## R version 3.1.0 (2014-04-10)
+## Platform: i386-w64-mingw32/i386 (32-bit)
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] grid      stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] knitr_1.7       gridExtra_0.9.1 ggplot2_1.0.0   reshape2_1.4   
+## [5] cluster_1.15.2 
+## 
+## loaded via a namespace (and not attached):
+##  [1] colorspace_1.2-4 digest_0.6.4     evaluate_0.5.5   formatR_1.0     
+##  [5] gtable_0.1.2     labeling_0.3     markdown_0.7.4   MASS_7.3-31     
+##  [9] mime_0.2         munsell_0.4.2    plyr_1.8.1       proto_0.3-10    
+## [13] Rcpp_0.11.3      scales_0.2.4     stringr_0.6.2    tools_3.1.0
+</code></pre>
 
 </body>
 
 </html>
-
